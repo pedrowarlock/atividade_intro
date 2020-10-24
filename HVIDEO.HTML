@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Vídeo Games: ANOS 70, 80 e 90</title>
+    <script src="jquery-1.8.3.js"> </script>
+
+  <script type="text/javascript">
+
+          function changeImage(a) {
+          document.getElementById("img").src=a;
+          }
+	  
+        function whats(){
+        alert("Vídeo Games: 70, 80 e 90. Zap: (21)99999-9999");}
+		
+       setInterval(function(){
+                $(".nov").fadeOut();
+                $(".nov").fadeIn();
+         },10);		
+ 
+</script>		
+
 </head>
 <body>
 
@@ -35,7 +53,7 @@
 
     <!-- Imagem do whatsapp -->
     <span>
-        <img src="whats.jpg" width="50px" height="50px" style="position: absolute; top: 20px; right: 4%;">
+            <img src="whats.jpg" onclick="whats()" width="50px" height="50px" style="position: absolute; top: 20px; right: 4%; cursor: pointer;">
     </span>
 
     <!-- Imagem do metal slug -->
@@ -51,9 +69,9 @@
         </a>
     </span>
 
-    <!-- Imagem BART -->
+    <!-- Imagem BART COM MARQUEE QUE MOVIMENTE ELE PELA TELA-->
     <span>
-        <marquee hspace=330 width=650 direction=right  style="position: absolute; top: 150px; left:250px;"> 
+        <marquee hspace=330px width=650px direction=right  style="position: absolute; top: 150px; left:250px;"> 
             <img src="bart.gif"  width="150px" height="150px" >
         </marquee>
     </span>
@@ -95,12 +113,12 @@
         </a>
 
         <a href="#irpara9">
-            <img src="B_NOV.jpg" class=”nov” style="position: absolute; top: 610px; left: 4%;">
+            <img src="B_NOV.jpg" class="nov" style="position: absolute; top: 610px; left: 4%;">
         </a>
 
     </span>
 
-
+    <!-- TABELA DE CONSOLES, DATAS E VALOR -->
     <span style="position: absolute; right: 3%; top: 320px;">
         <font color="white">
             <table>
@@ -180,7 +198,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         <font color="green" face="Calibri" size="20" id="irpara2">NES (NINTENDINHO 8 BITS) </font>
         <br>
@@ -203,7 +221,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         <font color="green" face="Calibri" size="20" id="irpara3">SEGA MASTER SYSTEM</font>
         <br>
@@ -224,7 +242,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         <font color="green" face="Calibri" size="20" id="irpara4">SEGA MEGA DRIVE</font>
         <br>
@@ -248,7 +266,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         
         <font color="green" face="Calibri" size="20" id="irpara5">SUPER NINTENDO</font>
@@ -277,7 +295,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         <font color="green" face="Calibri" size="20" id="irpara6">SEGA SATURN</font>
         <br>
@@ -297,7 +315,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         <font color="green" face="Calibri" size="20" id="irpara7">SONY PLAYSTATION </font>
         <br>
@@ -317,7 +335,7 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
         
         <font color="green" face="Calibri" size="20" id="irpara8">NINTENDO 64</font>
@@ -340,21 +358,23 @@
         <a href="#topo">
             <img src="V_TOPO.jpg">
         </a>
-        <br><br>
+        <br><br><br>
 
-
+        <!-- TITULO VEM AÍ A NOVA GERAÇÃO -->
         <font color="red" face="Calibri" size="20" id="irpara9">VEM AÍ A NOVA GERAÇÃO !</font>
         <br>
-        <div id=”main_img”>
+        <!-- BANER DA NOVA GERAÇÃO (PS5 E XBOX) -->
+        <div id="main_img">
             <img src="PS5.jpg" width="650px" height="400px" id="img">
         </div>
 
+        <!-- SETAS PARA TROCAR IMAGEM DO BANER DE "NOVA GERAÇÃO" -->
         <div id="thumb_img">
-            <span style="position: absolute; left: 20%; top: 4850px;">
-                <img src="SETA_E.png" width="50px" height="50px" onclick="">
+            <span style="position: absolute; left: 20%; top: 4850px; cursor: pointer;">
+                <img src="SETA_E.png" width="50px" height="50px" onclick="changeImage('PS5.jpg')">
             </span>
-            <span style="position: absolute; right: 20%; top: 4850px;">
-                <img src="SETA_D.png" width="50px" height="50px" onclick="">
+            <span style="position: absolute; right: 20%; top: 4850px; cursor: pointer;">
+                <img src="SETA_D.png" width="50px" height="50px" onclick="changeImage('XBOX.jpg')">
             </span>
         </div>
         <br>
@@ -362,9 +382,65 @@
             <img src="V_TOPO.jpg">
         </a>
         <br><br><br>
-
-       
-        
     </center>
+        <!-- posição do formulario -->
+        <span style="position: absolute; left: 10%;">
+            <!-- informações de envio de formulario -->
+            <form action="mailto:destino@email.com" method="post" enctype="text/plain" id="irform">
+                <fieldset>
+
+                    <!-- titulo do formulario -->
+                    <legend>CONTE A SUA HISTÓRIA COM GAMES PARA NÓS !</legend>
+                    <br>
+
+                    <!-- imagem do avião -->
+                    <img src="PLANE.jpg" width="180px" height="100px" align="right">
+                    
+                    <!-- digite seu nome -->
+                    <label for="NOME">Nome:</label>
+                    <input type="text" id="Nome" name="Nome" size="30" maxlength="100" required>
+                    <br><br>
+                    
+                    <!-- Digite seu email -->
+                    <label for="EMAIL">E-mail:</label>
+                    <input type="text" id="EMAIL" name="EMAIL" size="25" maxlength="100" required>
+                    
+                    <br><br>
+                    
+                    <!-- Digite cidade -->
+                    <label for="CIDADE">Cidade:</label>
+                    <input type="text" id="CIDADE" name="CIDADE" size="20" maxlength="60">
+                    
+                    <br><br>
+
+                    <!-- Digite seu texto -->
+                    <p>
+                        <label for="HISTORIA">Sua história: <br> <br></label>
+                        <textarea name="obs" id="HISTORIA" cols="80" rows="5" placeholder="Digite o seu texto aqui" required></textarea>
+                    </p>
+                    <br>
+                    
+                    <!-- Caixa de marcação para receber novidades -->
+                    <input id="receber_info" type="checkbox" name="receber_info">
+                    <label for="receber_info">Desejo receber novidades deste site em meu e-mail.</label>
+
+                    <br><br>
+                    <!-- botões -->
+                    <input type="submit" value="Enviar formulário"> <br> <br>
+                    <input type="reset" value="Apagar tudo"> 
+
+
+                </fieldset>
+            </form>
+        </span>
+        <br><br><br>
+
+        <!-- imagem do "SITE CRIADO EM OUTUBRO" -->
+        <span style="position: absolute; left: 40%; top: 5600px;">
+            <img src="SITEDES.jpg">
+        </span>
+
+        <br><br><br>
+     
 </body>
 </html>
